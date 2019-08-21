@@ -1,2 +1,18 @@
 language: node_js
-script: true
+node_js:
+  - "8"
+script:
+  - npm run test
+  - npm run build
+deploy:
+  provider: npm
+  email: "$NPM_EMAIL"
+  api_key: "$NPM_TOKEN"
+  skip_cleanup: true
+  on:
+    branch: master
+  tag: latest
+
+notifications:
+  email: false
+  webhooks: https://oapi.dingtalk.com/robot/send?access_token=34ebbe4ff5af81efc690832f1b3d0aa55ffc3b338178856e790f8eb17ffd3b33
