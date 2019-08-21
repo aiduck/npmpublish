@@ -4,13 +4,16 @@
   "description": "test",
   "main": "index.js",
   "scripts": {
+    "dev": "cross-env NODE_ENV=dev node build.js",
+    "build": "node build.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "test"
   ],
   "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
   },
   "file": [
     "index.js"
@@ -23,5 +26,12 @@
   "license": "ISC",
   "dependencies": {
     "@tuia/rip": "^0.1.6"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "babel-loader": "^8.0.6",
+    "clean-webpack-plugin": "^3.0.0",
+    "webpack": "^4.39.2"
   }
 }
