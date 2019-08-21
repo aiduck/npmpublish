@@ -1,0 +1,23 @@
+{
+  "name": "@aiduck/npmpublish",
+  "version": "0.0.4",
+  "description": "test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "test"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "file": [
+    "index.js"
+  ],
+  "author": "aiduck",
+  "license": "ISC",
+  "dependencies": {
+    "@tuia/rip": "^0.1.6"
+  }
+}
